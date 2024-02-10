@@ -2,6 +2,7 @@
   <div class="md:w-3/4">
     <div
       class="bg-zinc-800 border-2 border-slate-700 px-6 py-2 h-96 flex flex-col-reverse overflow-auto [overflow-anchor:auto] scroll-smooth"
+      data-cy="chat-window"
     >
       <div class="flex flex-col">
         <p v-for="message in store.messageList" :key="message.index">
@@ -26,6 +27,7 @@ const store = useStore()
 function onSendMessage() {
   if (messageInput.value) {
     store.sendMessage(messageInput.value)
+    messageInput.value = null
   } else {
     // handle invalid message
   }

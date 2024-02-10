@@ -1,10 +1,8 @@
 <template>
   <div class="md:w-1/4">
     <img src="@/assets/cheese.png" class="w-12 h-12 my-6 mx-auto" />
-    <div class="bg-zinc-800 border-2 border-slate-700 h-72 px-6 py-2 overflow-y-scroll">
-      <p v-for="user in userList" :key="user">
-        {{ user === currentUser ? '*' : '' }} {{ user }}
-      </p>
+    <div class="bg-zinc-800 border-2 border-slate-700 h-72 px-6 py-2 overflow-y-scroll" data-cy="user-list">
+      <p v-for="user in userList" :key="user">{{ user === currentUser ? '*' : '' }} {{ user }}</p>
     </div>
   </div>
 </template>

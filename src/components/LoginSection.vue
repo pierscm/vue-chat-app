@@ -1,5 +1,5 @@
 <template>
-  <div class=" h-screen pt-32 content-center text-zinc-400">
+  <div class="h-screen pt-32 content-center text-zinc-400">
     <div class="min-w-42 max-w-96 mx-auto bg-zinc-900 border-2 border-gray-800">
       <div class="w-100 py-2 px-4 bg-slate-950 ">
         <p class=" text-2xl">Welcome to the Cheese Chat</p>
@@ -10,13 +10,14 @@
             <p>Username</p>
           </div>
           <input
+            data-cy="login-input"
             v-model="formUsername"
             class=" w-2/4 bg-zinc-900 border-b-2 border-zinc-400"
           />
         </div>
 
         <div class="m-6 w-100 text-right">
-          <button class="hover:text-sky-200">[Login]</button>
+          <button class="hover:text-sky-200" data-cy="login-button">[Login]</button>
         </div>
       </form>
     </div>
